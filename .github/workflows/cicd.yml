@@ -26,7 +26,7 @@ jobs:
         run: echo "Test the code"
 
   deploy:
-    runs-on: ubunt-latest
+    runs-on: ubuntu-latest
     steps:  
       - name: deploy the code
         run: echo "Deploy the code on server"
