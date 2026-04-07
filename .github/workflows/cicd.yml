@@ -1,9 +1,7 @@
 name: cicd
 
 on:
-  push:
-    branch:
-      - main
+  workflow_dispatch:
 
 jobs:
 
@@ -12,6 +10,7 @@ jobs:
     steps:
       - name: Copy the code from github to runner vm
         run: echo "Copy the code from github to runner vm"
+
 
   build:
     runs-on: ubuntu-latest
