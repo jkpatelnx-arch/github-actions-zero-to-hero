@@ -1,1 +1,28 @@
 
+name: hello
+
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+
+  greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: greet hello to doston
+        run: echo "Hello Doston"
+      
+      - name: gree to USER
+        run: echo "Hello $USER"
+
+  details:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check Python and Docker version details
+        run: pyhon3 --version && docker --version
