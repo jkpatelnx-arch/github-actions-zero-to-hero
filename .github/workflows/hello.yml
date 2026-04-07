@@ -25,4 +25,4 @@ jobs:
     steps:
 
       - name: Check Python and Docker version details
-        run: pyhon --version && docker --version
+        run: python3 --version && docker --version
