@@ -13,18 +13,21 @@ jobs:
 
 
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Build the docker image form the code
         run: echo "Build the docker image"
 
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Test the code everthing working or not
         run: echo "Test the code"
 
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:  
       - name: deploy the code
