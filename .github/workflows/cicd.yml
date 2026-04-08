@@ -5,7 +5,10 @@ on:
   push:
     branch:
       - main
-      
+    
+    paths:
+      - '**html'
+
 jobs:
 
   code:
