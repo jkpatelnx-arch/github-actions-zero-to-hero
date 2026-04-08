@@ -1,13 +1,18 @@
 name: cicd
 
 on:
-#  workflow_dispatch:
-  push:
-    branch:
-      - main
-    
-    paths:
-      - '**html'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: This is the enviornment value where this workflow runs
+        default: 'dev'
+        required: true
+        type: choice 
+        options: 
+          - dev
+          - prod
+          - staging 
+
 
 jobs:
 
